@@ -1,11 +1,11 @@
-# stable-diffusion-xl-1.0
-This uses the sdnext api container to serve stable diffusion xl 1.0
+# RunDiffusion XL
+This uses the sdnext api container to serve [RunDiffusionXL](https://civitai.com/models/120964/rundiffusion-xl)
 
 ## Build
 
 ```shell
 docker buildx build \
--t saladtechnologies/sdnext-sdxl10:latest \
+-t saladtechnologies/sdnext-rundiffusion-xl:latest \
 --provenance=false \
 --output type=docker \
 .
@@ -20,7 +20,7 @@ docker run \
 -p 7860:7860 \
 -e PORT=7860 \
 -e HOST=0.0.0.0 \
-saladtechnologies/sdnext-sdxl10:latest
+saladtechnologies/sdnext-rundiffusion-xl:latest
 ```
 
 For ipv6 networking, make sure you have the network created:
@@ -37,7 +37,7 @@ docker run \
 -e PORT=7860 \
 -e HOST='[::]' \
 --network="ip6net" \
-saladtechnologies/sdnext-sdxl10:latest
+saladtechnologies/sdnext-rundiffusion-xl:latest
 ```
 
 ## Enable Refiner
@@ -48,7 +48,7 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "sd_model_refiner": "refiner/sd_xl_refiner_1.0.safetensors"
+  "sd_model_refiner": "refiner/refiner.safetensors"
 }'
 ```
 
