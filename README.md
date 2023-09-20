@@ -15,7 +15,6 @@ docker buildx build \
 
 ```shell
 docker run \
---rm \
 --gpus all \
 -p 7860:7860 \
 -e PORT=7860 \
