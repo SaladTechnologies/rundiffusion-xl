@@ -60,14 +60,14 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "prompt": "cat",
+  "prompt": "iron man made of lava",
   "batch_size": 1,
-  "steps": 35,
+  "steps": 20,
   "refiner_start": 20,
   "denoising_strength": 0.43,
   "cfg_scale": 7,
-  "width": 1216,
-  "height": 896,
+  "width": 896,
+  "height": 1216,
   "send_images": true,
   "save_images": false,
   "enable_hr": true,
@@ -78,5 +78,5 @@ curl -X 'POST' \
 ```
 
 ```shell
-cat response.json | jq -r '.images[0]' | base64 -d > cat.jpg
+cat response.json | jq -r '.images[0]' | base64 -d > ironman.jpg
 ```
