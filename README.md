@@ -1,5 +1,5 @@
 # RunDiffusion XL
-This uses the sdnext api container to serve [RunDiffusionXL](https://civitai.com/models/120964/rundiffusion-xl)
+This uses the [sdnext api container](https://github.com/SaladTechnologies/sdnext/tree/docker-build) to serve [RunDiffusionXL](https://civitai.com/models/120964/rundiffusion-xl)
 
 ## Build
 
